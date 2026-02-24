@@ -1,5 +1,5 @@
 import React from 'react';
-import './Pages.css';
+import './Courses.css';
 
 export default function Courses() {
   const courses = [

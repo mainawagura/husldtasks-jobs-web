@@ -1,5 +1,5 @@
 import React from 'react';
-import './Pages.css';
+import './Resources.css';
 
 export default function Resources() {
   const resources = [

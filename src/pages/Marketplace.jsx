@@ -1,5 +1,5 @@
 import React from 'react';
-import './Pages.css';
+import './Marketplace.css';
 
 export default function Marketplace() {
   const services = [
