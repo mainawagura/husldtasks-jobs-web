@@ -1,14 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Home from './pages/Home';
-import Dashboard from './pages/Dashboard';
-import Marketplace from './pages/Marketplace';
-import Courses from './pages/Courses';
-import Resources from './pages/Resources';
-import Agencies from './pages/Agencies';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import Marketplace from "./pages/Marketplace";
+import Courses from "./pages/Courses";
+import Resources from "./pages/Resources";
+import Agencies from "./pages/Agencies";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+import "./App.css";
 
 function App() {
   return (
@@ -23,9 +25,11 @@ function App() {
         <Route path="/agencies" element={<Agencies />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>
     </Router>
   );
 }
 
-export default App
+export default App;

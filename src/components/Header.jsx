@@ -9,9 +9,8 @@ export default function Header() {
         <div className="logo">
           <Link to="/">LEGIIT</Link>
         </div>
-        
-        <nav className="nav-menu">
-          <Link to="/dashboard" className="nav-item">Dashboard</Link>
+                <nav className="nav-menu">
+
           <Link to="/marketplace" className="nav-item">Marketplace</Link>
           <Link to="/courses" className="nav-item">Courses</Link>
           <Link to="/resources" className="nav-item">Resources</Link>
