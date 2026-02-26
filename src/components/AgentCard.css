@@ -1,0 +1,100 @@
+.agent-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    width: 200px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .agent-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 36px rgba(0,0,0,0.15);
+    }
+
+.agent-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 0.7rem;
+}
+
+.agent-card h4 {
+    margin: 0.3rem 0 0.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.agent-role {
+    font-weight: 600;
+    color: #7c3aed;
+    margin-bottom: 0.8rem;
+}
+
+.task-status {
+    font-weight: 700;
+    padding: 0.3rem 0.6rem;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    color: white;
+    margin-bottom: 1rem;
+    display: inline-block;
+    min-width: 100px;
+}
+
+.task-status-in-progress {
+    background-color: #4f46e5;
+}
+
+.task-status-completed {
+    background-color: #16a34a;
+}
+
+.task-status-delayed {
+    background-color: #dc2626;
+}
+
+.btn-chat {
+    background-color: #4f46e5;
+    border: none;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-chat:hover {
+        background-color: #4338ca;
+    }
+
+.agent-card.hire-agent {
+    cursor: pointer;
+    font-size: 3rem;
+    color: #4f46e5;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px dashed #4f46e5;
+    background: #ede9fe;
+    min-height: 240px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+    .agent-card.hire-agent:hover {
+        background: #ddd6fe;
+        border-color: #4338ca;
+    }
+
+.plus-icon {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+}

@@ -1,0 +1,232 @@
+.orders-page {
+  padding: 32px 40px;
+}
+
+.orders-header h1 {
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.orders-header .subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.orders-filters-tabs {
+  margin-top: 32px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.status-tabs {
+  display: flex;
+  gap: 12px;
+}
+
+.tab {
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.tab .count {
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.tab.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tab.active .count {
+  background: var(--primary-color);
+  color: white;
+}
+
+.orders-actions-bar {
+  margin: 32px 0;
+}
+
+.search-box {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border-color);
+  flex: 1;
+  max-width: 500px;
+}
+
+.search-icon-svg {
+  color: var(--text-light);
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  color: var(--text-main);
+}
+
+.btn-filter, .btn-export {
+  background: white;
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-filter:hover, .btn-export:hover {
+  background: #f9fafb;
+}
+
+.btn-filter svg, .btn-export svg {
+  color: var(--text-muted);
+}
+
+/* Table Styling */
+.orders-table-container {
+  overflow-x: auto;
+  background: white;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.orders-table th {
+  text-align: left;
+  padding: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #fafcfe;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.orders-table th.active-sort {
+  color: var(--text-main);
+}
+
+.orders-table td {
+  padding: 16px;
+  font-size: 13px;
+  color: var(--text-main);
+  border-bottom: 1px solid #f3f6f9;
+}
+
+.orders-table tr:hover {
+  background: #f9fbfe;
+}
+
+.checkbox-col { width: 40px; }
+.checkbox-col input { cursor: pointer; }
+
+.order-id { font-weight: 600; color: var(--text-muted); }
+.product-name { font-weight: 700; }
+
+.departure-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.departure-date strong { font-size: 13px; }
+.departure-date .time { font-size: 11px; color: var(--text-light); margin-top: 2px; }
+
+/* Status Badges */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status-in-progress { background: var(--status-blue-light); color: var(--status-blue); }
+.status-completed { background: var(--status-green-light); color: var(--status-green); }
+.status-returned { background: var(--status-orange-light); color: var(--status-orange); }
+.status-canceled { background: var(--status-red-light); color: var(--status-red); }
+
+.delivery-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.delivery-status .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.price-cell {
+  font-weight: 800;
+}
+
+.gap-md { gap: 12px; }
+
+@media (max-width: 1024px) {
+  .orders-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .orders-table {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orders-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .status-tabs {
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 8px;
+  }
+
+  .action-bar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-wrapper {
+    width: 100%;
+  }
+
+  .action-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

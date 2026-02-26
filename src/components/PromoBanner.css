@@ -1,0 +1,53 @@
+.promo-banner {
+  background: linear-gradient(105deg, #a78bfa 0%, #7b61ff 100%);
+  border-radius: 24px;
+  padding: 32px 40px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-content {
+  max-width: 60%;
+}
+
+.banner-content h3 {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
+.banner-content p {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.banner-content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.btn-check-details {
+  background: #2dd4bf;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn-check-details:hover {
+  background: #14b8a6;
+  transform: scale(1.05);
+}

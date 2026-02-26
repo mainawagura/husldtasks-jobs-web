@@ -1,0 +1,58 @@
+.tracking-page {
+  padding: 32px 40px;
+}
+
+.page-header-v2 h1 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+.page-header-v2 p { color: var(--text-light); font-size: 14px; margin-bottom: 40px; }
+
+.tracking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.task-track-card { padding: 24px; }
+
+.status-tag-v2 {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.status-tag-v2.active { background: var(--status-blue-light); color: var(--status-blue); }
+.status-tag-v2.completed { background: var(--status-green-light); color: var(--status-green); }
+.status-tag-v2.on-leave { background: var(--status-orange-light); color: var(--status-orange); }
+
+.task-track-card h3 { font-size: 18px; font-weight: 700; color: var(--text-main); }
+
+.task-agent-meta { margin: 20px 0; background: #f9fafb; padding: 12px; border-radius: 12px; border: 1px solid #f1f5f9; }
+.mini-avatar-v2 { width: 32px; height: 32px; border-radius: 10px; }
+.meta-text { display: flex; flex-direction: column; }
+.label-v2 { font-size: 10px; color: var(--text-light); font-weight: 600; }
+.name-v2 { font-size: 13px; font-weight: 700; color: var(--text-main); }
+
+.task-progress-section { margin-bottom: 24px; }
+.progress-labels { font-size: 12px; font-weight: 700; color: var(--text-muted); margin-bottom: 10px; }
+.main-progress-bar { width: 100%; height: 8px; background: #f1f5f9; border-radius: 20px; overflow: hidden; }
+.main-progress-bar .fill { height: 100%; background: var(--primary-color); border-radius: 20px; transition: width 0.5s ease-out; }
+
+.card-footer-v2 { padding-top: 20px; border-top: 1px solid #f1f5f9; }
+.val-v2 { font-size: 12px; font-weight: 700; color: var(--text-main); }
+
+.btn-details {
+  background: white;
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.btn-details:hover { background: #f8fafc; border-color: var(--primary-color); color: var(--primary-color); }
+
+.icon-btn-v2 { background: transparent; color: var(--text-light); }
+.gap-sm { gap: 8px; }
