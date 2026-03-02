@@ -85,6 +85,19 @@ button {
   outline: none;
   font-family: inherit;
   cursor: pointer;
+  user-select: none;
+}
+
+button:active { transform: scale(0.96); }
+
+input:focus, button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--primary-light);
+  color: var(--primary-color);
 }
 
 /* Professional Scrollbar refinement */

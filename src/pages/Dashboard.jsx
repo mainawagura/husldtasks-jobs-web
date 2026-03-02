@@ -14,7 +14,7 @@ export default function Dashboard({ agents, selectedAgent, setSelectedAgent }) {
   return (
     <div className="dashboard-content-padding">
       <div className="title-row">
-        <h1>Dashboard</h1>
+        <h1>Overview</h1>
       </div>
 
       <div className="metrics-grid">

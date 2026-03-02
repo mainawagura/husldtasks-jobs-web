@@ -1,19 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import RightSidebar from '../components/RightSidebar';
+import { supabase } from '../utils/supabaseClient';
 import './MainLayout.css';
 
 export default function MainLayout({ children, isCollapsed, onToggle }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [selectedAgent, setSelectedAgent] = useState(null);
-
-  // Define agents globally to share across notification and sidebar
-  const agents = [
+  const [agents, setAgents] = useState([
     { id: 1, name: "Helmen Tom", role: "Programmer", avatar: "https://i.pravatar.cc/150?u=1", currentTask: "Backend API Setup", taskStatus: "Active", progress: 75 },
     { id: 2, name: "Jane Smith", role: "3D Designer", avatar: "https://i.pravatar.cc/150?u=2", currentTask: "Asset Modeling", taskStatus: "On Leave", progress: 30 },
     { id: 3, name: "Rakib Kowshar", role: "Product Designer", avatar: "https://i.pravatar.cc/150?u=3", currentTask: "UI Kit Design", taskStatus: "Active", progress: 90 },
-  ];
+  ]);
+
+  // Supabase fetch is temporarily disabled as per user request to use hardcoded data
+  /*
+  useEffect(() => {
+    const fetchHiredAgents = async () => {
+      // ... Supabase logic ...
+    };
+    fetchHiredAgents();
+  }, []);
+  */
 
   const handleNotifySelect = (agentId) => {
     const agent = agents.find(a => a.id === agentId);

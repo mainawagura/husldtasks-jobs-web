@@ -39,35 +39,52 @@
   color: var(--primary-color);
 }
 
-.brand-icon {
+.brand-logo-wrap {
   width: 32px;
   height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 4px 8px rgba(21, 208, 124, 0.2));
 }
 
 .brand-name {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  text-transform: uppercase;
 }
 
 .collapse-toggle {
-  background: transparent;
-  color: var(--text-light);
+  background: #f1f5f9;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
   font-size: 10px;
-  padding: 4px;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.collapse-toggle:hover {
+  background: white;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .nav-section {
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .section-title {
   padding: 0 24px;
-  font-size: 10px;
-  font-weight: 700;
-  color: var(--text-light);
-  letter-spacing: 0.05em;
-  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+  opacity: 0.6;
 }
 
 .menu {
@@ -76,29 +93,30 @@
 }
 
 .menu-item {
-  padding: 10px 12px;
+  padding: 12px 14px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  border-radius: 8px;
+  gap: 14px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   text-decoration: none;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .menu-item:hover {
-  background: var(--primary-light);
+  background: #f8fafc;
   color: var(--primary-color);
+  transform: translateX(4px);
 }
 
 .menu-item.active {
   background: var(--primary-light);
   color: var(--primary-color);
-  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(21, 208, 124, 0.1);
 }
 
 .menu-icon {
@@ -220,5 +238,19 @@
 
   .collapse-toggle {
     display: none;
+  }
+
+  .sidebar-footer {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 260px;
+    left: -260px;
+  }
+  .sidebar.mobile-open {
+    transform: translateX(260px);
   }
 }

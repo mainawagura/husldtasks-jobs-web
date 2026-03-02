@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from "../utils/supabaseClient";
-import './Signup.css';
+import authImg from "../assets/images/auth.png";
+import * as Icons from "../components/Icons";
+import './Auth.css';
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -94,10 +96,23 @@ export default function Signup() {
 
   return (
     <div className="auth-page">
-      <div className="auth-container">
-        <div className="auth-card">
+      <Link to="/" className="back-home">
+        <Icons.IconDashboard />
+        Back to Home
+      </Link>
+
+      <div className="auth-visual-side">
+        <div className="auth-visual-content">
+          <img src={authImg} alt="Husld Secure Signup" />
+          <h2>Join the Community.</h2>
+          <p>Create your professional account and start scaling your services today.</p>
+        </div>
+      </div>
+
+      <div className="auth-form-side">
+        <div className="auth-form-container">
           <h1>Sign Up</h1>
-          <p className="auth-subtitle">Create your account</p>
+          <p className="auth-subtitle">Create your professional account in seconds.</p>
 
           {/* Friendly Error Message */}
           {error && (
@@ -115,7 +130,7 @@ export default function Signup() {
           )}
 
           <form onSubmit={handleSubmit} className="auth-form">
-            <div className={`form-group ${error && !formData.fullName.trim() ? "has-error" : ""}`}>
+            <div className="form-group">
               <label>Full Name</label>
               <input
                 type="text"
@@ -123,12 +138,12 @@ export default function Signup() {
                 value={formData.fullName}
                 onChange={handleChange}
                 onFocus={handleFocus}
-                placeholder="Enter your full name"
+                placeholder="John Doe"
                 required
               />
             </div>
 
-            <div className={`form-group ${error && !formData.email.trim() ? "has-error" : ""}`}>
+            <div className="form-group">
               <label>Email Address</label>
               <input
                 type="email"
@@ -136,12 +151,12 @@ export default function Signup() {
                 value={formData.email}
                 onChange={handleChange}
                 onFocus={handleFocus}
-                placeholder="Enter your email"
+                placeholder="name@company.com"
                 required
               />
             </div>
 
-            <div className={`form-group ${error && formData.password.length < 6 ? "has-error" : ""}`}>
+            <div className="form-group">
               <label>Password</label>
               <input
                 type="password"
@@ -149,12 +164,12 @@ export default function Signup() {
                 value={formData.password}
                 onChange={handleChange}
                 onFocus={handleFocus}
-                placeholder="Create a password"
+                placeholder="At least 6 characters"
                 required
               />
             </div>
 
-            <div className={`form-group ${error && formData.password !== formData.confirmPassword ? "has-error" : ""}`}>
+            <div className="form-group">
               <label>Confirm Password</label>
               <input
                 type="password"
@@ -162,7 +177,7 @@ export default function Signup() {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 onFocus={handleFocus}
-                placeholder="Confirm your password"
+                placeholder="Repeat password"
                 required
               />
             </div>
@@ -176,12 +191,12 @@ export default function Signup() {
                 ? `Please wait ${retryTime}s`
                 : loading
                 ? "Creating Account..."
-                : "Sign Up"}
+                : "Create Your Account"}
             </button>
           </form>
 
           <div className="auth-footer">
-            <p>Already have an account? <Link to="/login">Log In</Link></p>
+            <p>Already have an account? <Link to="/login">Sign in instead</Link></p>
           </div>
         </div>
       </div>

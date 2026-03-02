@@ -17,6 +17,17 @@
   z-index: 20;
 }
 
+@media (max-width: 768px) {
+  .dashboard-header-v2 {
+    height: auto;
+    padding: 12px 16px;
+  }
+  .tab-navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 .tab-navigation {
   background: #f1f5f9;
   padding: 4px;
@@ -87,30 +98,153 @@
 .mini-tab {
   padding: 6px 10px;
   font-size: 10px;
+  padding: 6px 12px;
+  font-size: 12px;
   font-weight: 700;
-  border-radius: 6px;
-  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mini-tab.active {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  color: var(--primary-color);
+}
+
+.metric-visualization {
+  padding: 20px 0;
+}
+
+.circular-progress-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-text .value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.progress-text .label {
+  font-size: 11px;
+  font-weight: 700;
   color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
-.mini-tab.active { background: white; color: var(--text-main); }
-
-.metric-visualization { margin: 24px 0; }
-.circular-progress-wrap { position: relative; width: 100px; height: 100px; }
-.progress-text { 
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  text-align: center;
+/* Mini Stats Elevation */
+.mini-stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 24px;
+  gap: 8px;
 }
-.progress-text .label { font-size: 10px; color: var(--text-light); font-weight: 600; text-transform: uppercase; }
-.progress-text .value { font-size: 16px; font-weight: 800; display: block; }
 
-.legend-row strong { font-size: 13px; font-weight: 800; color: var(--text-main); }
-.dot { width: 8px; height: 8px; border-radius: 50%; }
-.dot.teal { background: var(--primary-color); }
-.dot.gray { background: #e2e8f0; }
+.stat-title {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+.stat-big-value {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--text-main);
+}
+
+.stat-big-value.text-teal { color: var(--primary-color); }
+.stat-big-value.text-blue { color: #3b82f6; }
+.stat-big-value.text-red { color: #ef4444; }
+
+/* Secondary Grid Elevation */
+.secondary-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.chart-header-row .chart-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.flup-select {
+  padding: 6px 12px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #fcfcfc;
+  cursor: pointer;
+}
+
+.unit-tab {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.unit-tab.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.bar-chart-v2 {
+  height: 200px;
+  padding-top: 24px;
+}
+
+.bar {
+  width: 14px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.bar:hover {
+  background: var(--primary-color);
+  transform: scaleY(1.05);
+}
+
+/* Table Section Styling */
+.dashboard-agent-section {
+  margin-top: 40px;
+}
+
+.dashboard-agent-section h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+@media (max-width: 1200px) {
+  .metrics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content-padding {
+    padding: 24px;
+  }
+  
+  .metrics-grid, .secondary-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .contact-header h3 { font-size: 14px; }
 .avatar-sm { width: 32px; height: 32px; border-radius: 50%; }
@@ -126,36 +260,9 @@
 .toggle-btn { flex: 1; padding: 8px; font-size: 11px; font-weight: 700; border-radius: 6px; }
 .toggle-btn.active { background: white; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
 
-.mini-stat { 
-  padding: 20px; 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 80px;
-}
-.stat-title { 
-  font-size: 10px; 
-  font-weight: 800; 
-  color: var(--text-light); 
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.stat-big-value { 
-  font-size: 28px; 
-  font-weight: 800; 
-  line-height: 1;
-  margin-top: 8px;
-}
 .text-blue { color: #3b82f6; }
 .text-red { color: #ef4444; }
 .text-teal { color: var(--primary-color); }
-
-.secondary-grid {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 24px;
-  margin-bottom: 32px;
-}
 
 .performance-card { padding: 24px; }
 .bar-chart-v2 { height: 160px; margin-top: 24px; }
@@ -173,8 +280,6 @@
 
 .title-row h1 { font-size: 28px; font-weight: 800; color: var(--text-main); margin-bottom: 4px; }
 .contact-body p { font-size: 13px; color: var(--text-muted); font-weight: 600; line-height: 1.5; margin-bottom: 20px; }
-
-.dashboard-agent-section { margin-top: 32px; }
 
 /* Custom Scrollbar for Primary Column */
 .dashboard-primary-column::-webkit-scrollbar { width: 6px; }
@@ -215,5 +320,13 @@
 
   .secondary-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .stat-big-value {
+    font-size: 24px;
+  }
+  
+  .metric-card, .action-card {
+    padding: 16px;
   }
 }

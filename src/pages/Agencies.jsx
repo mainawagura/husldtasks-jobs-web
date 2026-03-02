@@ -13,8 +13,8 @@ export default function Agencies() {
     <div className="professional-page">
       <header className="page-header">
         <div className="header-text">
-          <h1>Agencies</h1>
-          <p className="text-muted">Hire top-tier specialized legal agencies for large-scale operations</p>
+          <h1>Partner Agencies</h1>
+          <p className="text-muted">Explore and manage high-performance teams within the HUSLD network</p>
         </div>
         <button className="btn-primary-v2">+ Register Agency</button>
       </header>

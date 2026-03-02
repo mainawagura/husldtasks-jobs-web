@@ -28,6 +28,62 @@
 .a-name-v3 { font-size: 16px; font-weight: 700; color: var(--text-main); margin: 0; }
 .a-spec-v3 { font-size: 13px; color: var(--text-light); font-weight: 600; margin-top: 4px; }
 
+.agency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.agency-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.agency-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  border-color: var(--primary-color);
+}
+
+.agency-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.agency-logo-wrap {
+  width: 56px;
+  height: 56px;
+  background: #f8fafc;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border: 1px solid var(--border-color);
+}
+
+.agency-info h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: var(--text-main);
+}
+
+.specialty-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary-color);
+  background: var(--primary-light);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
 .verified-icon-v3 { width: 14px; color: var(--primary-color); }
 
 .stat-v-v3 { text-align: center; }

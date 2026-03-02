@@ -37,15 +37,18 @@ export default function Sidebar({ isCollapsed, onToggle, isMobileOpen, onCloseMo
         <div className="sidebar-top">
           <div className="brand flex-between">
             <div className="brand-content flex-center">
-              <div className="brand-icon flex-center">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM12 8C9.79 8 8 9.79 8 12C8 14.21 9.79 16 12 16C14.21 16 16 14.21 16 12C16 9.79 14.21 8 12 8Z" fill="currentColor"/>
+              <div className="brand-logo-wrap">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="28" height="28" rx="8" fill="var(--primary-color)"/>
+                  <path d="M8 8H12V20H8V8Z" fill="white"/>
+                  <path d="M16 8H20V20H16V8Z" fill="white" fillOpacity="0.6"/>
+                  <path d="M12 12H16V16H12V12Z" fill="white"/>
                 </svg>
               </div>
-              {!isCollapsed && <span className="brand-name">Flup</span>}
+              {!isCollapsed && <span className="brand-name">HUSLD.</span>}
             </div>
             <button className="collapse-toggle" onClick={onToggle}>
-              {isCollapsed ? "❯" : "❮"}
+              {isCollapsed ? <Icons.IconDashboard style={{width: '12px', transform: 'rotate(90deg)'}} /> : "❮"}
             </button>
           </div>
           

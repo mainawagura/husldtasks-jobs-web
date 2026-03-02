@@ -6,23 +6,28 @@
   overflow: hidden;
 }
 
+/* Subtle inner shadow to give depth to the content area */
 .main-viewport {
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  box-shadow: inset 20px 0 40px rgba(0, 0, 0, 0.01);
 }
 
 .content-with-sidebar {
   display: flex;
   flex: 1;
-  overflow: hidden;
+  overflow: hidden; /* Constrain children so flex: 1 works */
 }
 
 .content-container {
   flex: 1;
   overflow-y: auto;
   position: relative;
+  background-color: #f8fafc;
+  padding: 0;
+  transition: all 0.3s ease;
 }
 
 /* Scrollbar for content */
@@ -54,4 +59,12 @@
   .main-viewport {
     width: 100vw;
   }
+  .content-container {
+    padding-bottom: 80px; /* Space for mobile nav if needed */
+  }
+}
+
+.main-layout-v2 {
+  position: relative;
+  overflow: hidden;
 }

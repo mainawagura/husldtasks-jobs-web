@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
+import SeedDatabase from "./pages/SeedDatabase";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import "./App.css";
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/seed" element={<SeedDatabase />} />
         
         {/* Protected Routes wrapped in MainLayout */}
         <Route 
